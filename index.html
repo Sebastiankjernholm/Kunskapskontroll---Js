@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunskapskontroll</title>
+</head>
+
+<body>
+    <main>
+        <form onsubmit="AddContact(event)">
+            <label for="name-input"></label>
+            <input type="text" id="name-input" name="name-input" placeholder="Namn">
+            <label for="phone-input"></label>
+            <input type="text" id="phone-input" name="phone-input" placeholder="Telefon">
+            <button type="submit">Skapa</button>
+        </form>
+        <h2>Kontaktlista</h2>
+        <ul id="contact-list" class="contact-list"></ul>
+    </main>
+    <script src="Main.js"></script>
+</body>
+
+</html>
