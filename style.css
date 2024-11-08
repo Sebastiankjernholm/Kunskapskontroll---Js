@@ -1,0 +1,85 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+form {
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.contact-list li .name,
+.contact-list li .phone {
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-list li .name {
+    font-weight: bold;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.contact-list li .phone {
+    margin-right: 10px;
+    flex: 1;
+}
+
+.contact-list li .buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.contact-list li .buttons button {
+    margin-left: 0;
+}
+
+#clear-all-button {
+    margin-top: 15px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}

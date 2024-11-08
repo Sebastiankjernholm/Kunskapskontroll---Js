@@ -1,3 +1,5 @@
+
+//Kontrollerar namn & telefonnummer
 function validateContact(name, phone) {
     if (!name || !phone) {
         return "Både namn och telefonnummer måste fyllas i.";
@@ -16,13 +18,14 @@ function AddContact(event) {
         return;
     }
 
-    // Raderar Error.message vid korrekt input
+    // Raderar Error-message vid korrekt input
     clearErrorMessage();
 
+    //ContactList
     const contactList = document.getElementById("contact-list");
 
     const listItem = document.createElement("Li");
-    listItem.innerHTML = `<span class="name">${name}</span> - <span class="phone">${phone}</span>`;
+    listItem.innerHTML = `<span class="name">${name}</span> <span class="phone">${phone}</span>`;
 
     // Skapar Edit & Delete - knappar
     const editButton = document.createElement("button");
@@ -46,13 +49,13 @@ function AddContact(event) {
     document.getElementById("name-input").value = '';
     document.getElementById("phone-input").value = '';
 }
-
+//Edit Contact
 function editContact(listItem, editButton) {
     const nameSpan = listItem.querySelector(".name");
     const phoneSpan = listItem.querySelector(".phone");
 
     if (nameSpan.contentEditable === "true") {
-        // Checkar om både namn och phone finns med
+        // Checkar om både namn och telefon finns med
         if (!nameSpan.textContent.trim() || !phoneSpan.textContent.trim()) {
             displayError("Kontakten kan inte sparas utan både namn och telefonnummer.");
             return;
@@ -65,18 +68,12 @@ function editContact(listItem, editButton) {
         nameSpan.contentEditable = "false";
         phoneSpan.contentEditable = "false";
         editButton.textContent = "Ändra";
-
-        document.getElementById("name-input").disabled = true;
-        document.getElementById("phone-input").disabled = true;
     } else {
         // Låser upp för edit
         nameSpan.contentEditable = "true";
         phoneSpan.contentEditable = "true";
         nameSpan.focus();
         editButton.textContent = "Spara";
-
-        document.getElementById("name-input").disabled = false;
-        document.getElementById("phone-input").disabled = false;
     }
 }
 
